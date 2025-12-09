@@ -1,0 +1,29 @@
+[project]
+name = "mediation-demo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "mishkin", email = "mlgelman@usc.edu" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "bitsandbytes==0.42.0",
+    "convokit==3.5.0",
+    "gradio>=6.0.2",
+    "numpy>=2.3.5",
+    "openai>=2.9.0",
+]
+
+[project.scripts]
+mediation-demo = "mediation_demo:main"
+
+[build-system]
+requires = ["uv_build>=0.9.13,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "setuptools>=80.9.0",
+    "wheel>=0.45.1",
+]
